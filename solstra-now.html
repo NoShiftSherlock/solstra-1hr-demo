@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Solstra Now — Delivered in under an hour | Solstra</title>
+<meta name="description" content="Solstra Now: your flavors delivered in under an hour, at the same price as the shelf. Powered by Gopuff + DoorDash." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/logo.svg" />
+</head>
+<body>
+
+<div class="announce">
+  <span class="bolt">⚡</span> <b>Now delivering in under 1 hour in 185 metros</b> — powered by Gopuff + DoorDash. <a href="#now">Check your address →</a>
+</div>
+
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo-white.svg" alt="Solstra" /></a>
+    <div class="nav-links">
+      <a href="index.html#shop">Shop all</a>
+      <a href="index.html#shop">All flavors</a>
+      <a href="index.html#shop">Best sellers</a>
+      <a href="index.html#shop">Variety packs</a>
+      <a href="solstra-now.html" class="nav-accent">Solstra Now</a>
+    </div>
+    <div class="nav-right">
+      <a class="hide-sm" href="#">Our ingredients</a>
+      <a class="hide-sm" href="#">Store locator</a>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="checkout.html" class="cart-pill" onclick="event.preventDefault();openCart()">Cart <span class="cart-count" id="cartCount">2</span></a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="now-hero" id="now">
+  <div class="wrap grid">
+    <div>
+      <div class="kick">⚡ On-demand</div>
+      <div class="eyebrow">Solstra Now</div>
+      <h1 class="serif">Delivered in under an hour.</h1>
+      <div class="facts">
+        <div><span class="k">Speed</span> Under 60 minutes to your door</div>
+        <div><span class="k">Price</span> Same price as the shelf — no markup</div>
+        <div><span class="k">Hours</span> Available 8:00 AM – 11:00 PM daily</div>
+        <div><span class="k">Coverage</span> 185 metros · 31 states</div>
+      </div>
+      <div class="chips-row retailer-chips">
+        <span class="chip"><img class="logo" src="assets/gopuff-icon.png" alt="Gopuff" /> Gopuff</span>
+        <span class="chip"><img class="logo" src="assets/doordash-icon.svg" alt="DoorDash" /> DoorDash</span>
+        <span class="delivery-badge"><span class="bolt">⚡</span> Under 1 hr</span>
+      </div>
+    </div>
+    <div class="now-visual">
+      <div class="float-badge"><span class="bolt">⚡</span> ~40 min near you</div>
+      <img src="assets/can-blackberrylemon.svg" alt="Solstra can available on demand" />
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS BAR -->
+<div class="now-addrbar">
+  <div class="wrap inner">
+    <span class="lbl">Deliver to</span>
+    <div class="field">
+      <span aria-hidden="true">📍</span>
+      <input id="nowAddr" type="text" placeholder="Enter your address — e.g. 1100 Congress Ave, Austin, TX" />
+      <button class="btn btn-dark" onclick="nowCheck()">Check availability</button>
+    </div>
+    <span class="now-addr-state" id="nowAddrState"><span>✓</span> In your zone · delivered in ~40 min</span>
+  </div>
+</div>
+
+<!-- GRID -->
+<section class="now-section">
+  <div class="wrap">
+    <div class="now-gridwrap show" id="nowGridWrap">
+      <div class="now-grid" id="nowGrid"><!-- injected by app.js --></div>
+      <div class="now-disclaimer">
+        Products and pricing shown reflect live Gopuff / DoorDash inventory near you. Small-format, delivery-only sizes — your order still lands in Solstra's account like any other.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- reassurance band -->
+<section class="how" style="padding:70px 0">
+  <div class="wrap">
+    <div class="eyebrow">Why Solstra Now</div>
+    <h2 class="serif" style="font-size:clamp(28px,3.4vw,42px);margin-top:12px;max-width:640px">A cold can now, not a 12-pack in two days.</h2>
+    <div class="steps now-steps-3">
+      <div class="step"><div class="icon">⚡</div><h3>Need-it-now, captured</h3><p>Keep the impulse sale on drinksolstra.com instead of losing it to retail or a marketplace.</p></div>
+      <div class="step"><div class="icon">🧾</div><h3>Same price as the shelf</h3><p>No surprise markup. Delivery is a small, transparent add-on at checkout.</p></div>
+      <div class="step"><div class="icon">📦</div><h3>No new ops</h3><p>Gopuff + DoorDash act as the delivery 3PL. No warehouse changes, no new fleet.</p></div>
+    </div>
+    <div class="assurance">
+      <span><span class="tick">✓</span> Order &amp; customer record stay with Solstra</span>
+      <span><span class="tick">✓</span> Same Shopify checkout &amp; account</span>
+      <span><span class="tick">✓</span> Go live in 2–3 weeks</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="updates">
+        <h3 class="serif">Don&rsquo;t miss out on Solstra updates.</h3>
+        <div class="toggle"><button class="btn btn-white">Email</button><button class="btn btn-outline" style="color:#fff">SMS</button></div>
+        <div class="subscribe"><input placeholder="Enter Your Email." /><button>›</button></div>
+      </div>
+      <div><div class="colhead">Support</div><ul><li><a href="#">Track your order</a></li><li><a href="#">Help center</a></li><li><a href="#">FAQs</a></li></ul></div>
+      <div><div class="colhead">About</div><ul><li><a href="#">Our story</a></li><li><a href="#">Reviews</a></li></ul></div>
+      <div><div class="colhead">Solstra Now</div><ul><li><a href="solstra-now.html">Check availability</a></li><li><a href="index.html#onehour">How it works</a></li><li><a href="#">Delivery zones</a></li></ul></div>
+      <div><div class="colhead">Legal</div><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+    </div>
+    <div class="base"><span>© 2026 Solstra</span><span>Solstra Now · one-hour delivery powered by Vesper Commerce · Gopuff + DoorDash</span></div>
+  </div>
+</footer>
+
+<div class="demo-ribbon"><span class="bolt">⚡</span> Vesper Commerce demo · Solstra is a fictional brand</div>
+
+<script src="app.js"></script>
+</body>
+</html>

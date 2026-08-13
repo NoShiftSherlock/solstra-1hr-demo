@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 1000" width="330" height="1000">
+<defs>
+  <linearGradient id="cyl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0"   stop-color="#000" stop-opacity=".30"/>
+    <stop offset=".10" stop-color="#000" stop-opacity=".12"/>
+    <stop offset=".30" stop-color="#fff" stop-opacity=".26"/>
+    <stop offset=".44" stop-color="#fff" stop-opacity=".10"/>
+    <stop offset=".70" stop-color="#000" stop-opacity=".06"/>
+    <stop offset="1"   stop-color="#000" stop-opacity=".34"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8C8F94"/><stop offset=".18" stop-color="#E8EAED"/>
+    <stop offset=".42" stop-color="#FBFCFD"/><stop offset=".62" stop-color="#C9CDD2"/>
+    <stop offset=".85" stop-color="#EDEFF2"/><stop offset="1" stop-color="#82868B"/>
+  </linearGradient>
+  <linearGradient id="metaldk" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#6E7176"/><stop offset=".35" stop-color="#B9BDC2"/>
+    <stop offset=".60" stop-color="#9AA0A6"/><stop offset="1" stop-color="#6B6E73"/>
+  </linearGradient>
+  <clipPath id="bodyclip">
+    <path d="M32 58 h266 v880 h-266 z"/>
+  </clipPath>
+  <path id="arc" d="M 58 208 A 150 128 0 0 1 272 208" fill="none"/>
+</defs>
+<ellipse cx="165.0" cy="938" rx="133.0" ry="21" fill="url(#metaldk)"/>
+<g clip-path="url(#bodyclip)">
+  <rect x="32" y="58" width="266" height="880" fill="#43265F"/>
+  <path d="M32 622
+           C 94 576, 182 642, 298 592
+           L 298 938 L 32 938 Z" fill="#E9C43C"/>
+  <text font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="3.4"
+        fill="#FFF8E6" fill-opacity=".92">
+    <textPath href="#arc" xlink:href="#arc" startOffset="50%" text-anchor="middle">SPARKLING TONIC</textPath>
+  </text>
+  <text x="165.0" y="392" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="76"
+        font-weight="700" letter-spacing="-3.2" fill="#FFF8E6">solstra</text>
+  <text x="165.0" y="426" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="16"
+        font-weight="500" letter-spacing="4.6" fill="#FFF8E6" fill-opacity=".82">ZERO PROOF</text>
+  <g transform="translate(165.0,498)" fill="#FFF8E6" fill-opacity=".55">
+    <path d="M0 -34 C 15 -18 15 4 0 20 C -15 4 -15 -18 0 -34 Z"/>
+    <path d="M-34 -6 C -18 -20 2 -14 12 4 C -6 12 -24 8 -34 -6 Z" opacity=".8"/>
+    <path d="M34 -6 C 18 -20 -2 -14 -12 4 C 6 12 24 8 34 -6 Z" opacity=".8"/>
+  </g>
+  <text x="165.0" y="714" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34"
+        font-weight="800" letter-spacing="1.2" fill="#3A2050">BLACKBERRY</text>
+  <text x="165.0" y="754" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34"
+        font-weight="800" letter-spacing="1.2" fill="#3A2050">LEMON</text>
+  <text x="165.0" y="786" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13"
+        font-weight="500" letter-spacing=".5" fill="#3A2050" fill-opacity=".8">Botanicals + adaptogens</text>
+  <g transform="translate(78,658)">
+    <circle r="30" fill="none" stroke="#3A2050" stroke-opacity=".55" stroke-width="1.6"/>
+    <text y="-3" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700"
+          letter-spacing=".4" fill="#3A2050">USDA</text>
+    <text y="12" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="10" font-weight="600"
+          letter-spacing=".4" fill="#3A2050" fill-opacity=".85">ORGANIC</text>
+  </g>
+  <g transform="translate(252,658)">
+    <text y="-4" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" font-weight="800"
+          fill="#3A2050">15</text>
+    <text y="12" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="9.5" font-weight="600"
+          letter-spacing=".5" fill="#3A2050" fill-opacity=".85">CALORIES</text>
+  </g>
+  <text x="165.0" y="912" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14"
+        font-weight="600" letter-spacing=".3" fill="#3A2050" fill-opacity=".9">12 FL OZ (355 mL)</text>
+  <rect x="32" y="58" width="266" height="880" fill="url(#cyl)"/>
+</g>
+<ellipse cx="165.0" cy="58" rx="133.0" ry="21" fill="url(#metal)"/>
+<ellipse cx="165.0" cy="55" rx="118.0" ry="16" fill="url(#metaldk)"/>
+<ellipse cx="165.0" cy="52" rx="106.0" ry="12" fill="#AEB3B8"/>
+<ellipse cx="165.0" cy="51" rx="93.0" ry="9" fill="#C6CBD0"/>
+<path d="M131.0 49 q34 -13 68 0 q-34 9 -68 0 z" fill="#9AA0A6"/>
+<circle cx="165.0" cy="50" r="4.6" fill="#7E838A"/>
+</svg>

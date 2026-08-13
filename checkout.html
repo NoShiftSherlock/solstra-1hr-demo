@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout | Solstra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/logo.svg" />
+</head>
+<body>
+
+<div class="checkout">
+  <!-- LEFT -->
+  <div class="co-left">
+    <div class="inner">
+      <div class="co-topbar">
+        <a href="index.html" class="co-logo"><img src="assets/logo.svg" alt="Solstra" style="height:40px" /></a>
+        <span class="email">customer@email.com</span>
+      </div>
+
+      <!-- Ship to -->
+      <div class="co-card">
+        <div class="ship-to">
+          <span class="k">Ship to</span>
+          <span class="v"><b>Alex Rivera</b><div>1100 Congress Ave, Austin TX 78701, US</div></span>
+          <span class="chev">⌄</span>
+        </div>
+
+        <!-- Shipping -->
+        <div class="co-block">
+          <div class="bh"><span class="t">Shipping</span><span class="chev" style="color:var(--gray)">⌃</span></div>
+          <div class="note">Please allow 1–2 business days for your order to be prepared and shipped, in addition to the delivery time for your selected shipping method below.</div>
+          <div class="opts" id="shipOpts">
+
+            <!-- 1-hour delivery options (the Vesper addition) -->
+            <label class="co-opt onehr selected" data-cost="7.00" data-label="1-Hour delivery" onclick="selectShip(this)">
+              <span class="radio"></span>
+              <span class="ret"><img src="assets/doordash-icon.svg" alt="DoorDash" /></span>
+              <span class="body">
+                <span class="n">1-Hour Delivery — DoorDash <span class="badge-1hr">⚡ NEW</span></span>
+                <span class="d">From a DoorDash near you · arrives in under 1 hour</span>
+              </span>
+              <span class="amt">$7.00</span>
+            </label>
+
+            <label class="co-opt onehr" data-cost="7.00" data-label="1-Hour delivery" onclick="selectShip(this)">
+              <span class="radio"></span>
+              <span class="ret"><img src="assets/gopuff-icon.png" alt="Gopuff" /></span>
+              <span class="body">
+                <span class="n">1-Hour Delivery — Gopuff <span class="badge-1hr">⚡ NEW</span></span>
+                <span class="d">From a Gopuff near you · arrives in under 1 hour</span>
+              </span>
+              <span class="amt">$7.00</span>
+            </label>
+
+            <!-- standard Solstra shipping tiers -->
+            <label class="co-opt" data-cost="0" data-label="2-4 Day Standard" onclick="selectShip(this)">
+              <span class="radio"></span>
+              <span class="body">
+                <span class="n">2-4 Day Standard</span>
+                <span class="d">Estimated delivery Mon, Aug 17</span>
+                <span class="free-ok">✓ Your cart now qualifies for free shipping!</span>
+              </span>
+              <span class="amt free">FREE</span>
+            </label>
+
+            <label class="co-opt" data-cost="19.99" data-label="2-Day Air" onclick="selectShip(this)">
+              <span class="radio"></span>
+              <span class="body">
+                <span class="n">2-Day Air</span>
+                <span class="d">Estimated delivery Fri, Aug 14</span>
+              </span>
+              <span class="amt">$19.99</span>
+            </label>
+
+            <label class="co-opt" data-cost="49.99" data-label="1-Day Air" onclick="selectShip(this)">
+              <span class="radio"></span>
+              <span class="body">
+                <span class="n">1-Day Air</span>
+                <span class="d">Estimated delivery Thu, Aug 13</span>
+              </span>
+              <span class="amt">$49.99</span>
+            </label>
+
+          </div>
+          <div class="note" id="routeNote" style="display:flex;gap:9px;color:var(--gray);font-family:var(--mono);font-size:11.5px">
+            <span style="color:#d99a12">⚡</span>
+            <span>Tagged “one-hour delivery” &amp; routed to the nearest stocked store — still appears in Solstra's Shopify OMS with the full customer record.</span>
+          </div>
+        </div>
+
+        <!-- Plan -->
+        <div class="co-block co-plan">
+          <div class="bh"><span class="t">Plan</span><span class="chev" style="color:var(--gray)">⌃</span></div>
+          <div class="opts" id="planOpts">
+            <label class="co-opt selected" onclick="selectPlan(this)">
+              <span class="radio"></span>
+              <span class="body"><span class="n">Pay now</span><span class="d">Pay the entire amount today</span></span>
+            </label>
+            <label class="co-opt" onclick="selectPlan(this)">
+              <span class="radio"></span>
+              <span class="body"><span class="n">Pay in 4 installments of <span id="instAmt">$18.05</span></span><span class="d">Pay every 2 weeks with no interest or fees</span></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment -->
+      <div class="co-section-title">Payment</div>
+      <input class="co-field" placeholder="Card number" value="•••• •••• •••• 4242" />
+      <div class="co-row">
+        <input class="co-field" placeholder="Expiration (MM/YY)" value="09 / 28" />
+        <input class="co-field" placeholder="Security code" value="•••" />
+      </div>
+
+      <button class="btn btn-dark btn-block btn-lg" id="placeBtn" style="margin-top:18px" onclick="placeOrder()">Place order · $72.21</button>
+      <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:16px"><a href="index.html" style="text-decoration:underline">← Return to Solstra</a></p>
+    </div>
+  </div>
+
+  <!-- RIGHT: order summary -->
+  <div class="co-right">
+    <div class="inner">
+      <div class="os-item">
+        <div class="im"><img src="assets/can-blackberrylemon.svg" alt="" /><span class="q">2</span></div>
+        <div class="nm"><div class="t">Blackberry Lemon</div><div class="s">12 Pack – 12 fl oz cans</div></div>
+        <div class="pr">$65.90</div>
+      </div>
+
+      <!-- upsell rail -->
+      <div class="upsell-title">Take advantage of free shipping. Add a customer favorite to your order.</div>
+      <div class="upsell-rail">
+        <div class="upsell-card"><div class="im"><img src="assets/can-strawberryguava.svg" alt="" /></div><div class="nm">Strawberry Guava</div><div class="pr">$32.95</div><button class="add" onclick="addToCart()">Add</button></div>
+        <div class="upsell-card"><div class="im"><img src="assets/can-peachmango.svg" alt="" /></div><div class="nm">Peach Mango (4-pack)</div><div class="pr">$13.99</div><button class="add" onclick="addToCart()">Add</button></div>
+        <div class="upsell-card"><div class="im"><img src="assets/can-cucumbermint.svg" alt="" /></div><div class="nm">Cucumber Mint</div><div class="pr">$32.95</div><button class="add" onclick="addToCart()">Add</button></div>
+        <div class="upsell-card"><div class="im"><img src="assets/can-varietypack.svg" alt="" /></div><div class="nm">Variety Pack</div><div class="pr">$34.95</div><button class="add" onclick="addToCart()">Add</button></div>
+      </div>
+
+      <!-- discount -->
+      <div class="co-discount">
+        <input placeholder="Discount code or gift card" />
+        <button>Apply</button>
+      </div>
+      <div class="co-discount-tag">🏷️ WELCOMETOSOLSTRA</div>
+      <div class="co-gift"><input type="checkbox" /> Add a free gift message</div>
+
+      <!-- totals -->
+      <div class="os-line"><span class="muted">Subtotal</span><span>$65.90</span></div>
+      <div class="os-line"><span class="muted" id="sumShipLabel">1-Hour delivery</span><span id="sumShip">$7.00</span></div>
+      <div class="os-line"><span class="muted">Estimated taxes</span><span>$5.86</span></div>
+      <div class="os-line total"><span>Total</span><span><span style="font-size:13px;color:var(--gray);font-weight:400;margin-right:6px">USD</span><span id="sumTotal">$72.21</span></span></div>
+
+      <div class="eta-badge" id="etaBadge" style="margin-top:20px"><span class="bolt">⚡</span> Estimated arrival: 40 minutes</div>
+      <div class="co-note" style="margin-top:8px;border-style:solid"><span>🔒</span> <span>Powered by <b>Vesper Commerce</b> — Gopuff + DoorDash acting as Solstra's delivery 3PL, natively in Solstra's existing Shopify checkout.</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
